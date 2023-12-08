@@ -1,40 +1,8 @@
 
-/* SITE SETTINGS*/
-
-@font-face {
-    font-family: Oswald;
-    src: url(fonts/Oswald-Regular.ttf);
-    font-style: normal;
-  }
-  @font-face {
-    font-family: Oswald;
-    src: url(fonts/Oswald-Medium.ttf);
-    font-weight: 500;
-  }
-@font-face {
-    font-family: OpenSans;
-    src: url(fonts/OpenSans-Regular.ttf);
-    font-style: normal;
-  }
-  @font-face {
-    font-family: OpenSans;
-    src: url(fonts/OpenSans-Italic.ttf);
-    font-style: italic;
-  }
-
-html,body{
-    width: 100vw;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow-x: hidden;
-}
-body{
-    background-color: #E9E6E2;
-}
 
 
 /* GLOBAL STYLES MOBILE */
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
     h1{
         font-family: Oswald;
         font-size: 2em;
@@ -42,7 +10,7 @@ body{
         margin-block-end: .35em;
         font-style: normal;
         font-weight: 500;
-        line-height: 122%; /* 85.4px */
+        line-height: 122%;
         color: #f1f1f1;
     }
     h2{
@@ -50,7 +18,7 @@ body{
         font-size: 1.7em;
         font-style: normal;
         font-weight: 400;
-        line-height: 100%; /* 73.2px */
+        line-height: 100%;
         color: #51375C;
         margin-block-start: 0.6em;
         margin-block-end: 0.6em;
@@ -60,7 +28,7 @@ body{
         font-size: 1.15em;
         font-style: normal;
         font-weight: 400;
-        line-height: 128%; /* 51.25px */
+        line-height: 128%;
         color: #e9e6e2;
     }
     h4{
@@ -68,12 +36,23 @@ body{
         font-size: 1em;
         font-style: normal;
         font-weight: 400;
-        line-height: 125%; /* 51.25px */
+        line-height: 125%;
         color: #51375C;
     
         margin-block-start: .25em;
         margin-block-end: .25em;
     }
+    p{
+        font-family: OpenSans;
+        font-size: .85em;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: #4B342D;
+    }
+    a{
+        font-family: Oswald;
+    }
 
 
     a.block_button{
@@ -91,10 +70,10 @@ body{
         margin-top: 0;
         margin-bottom: 0;
     }
-}
+} */
 
 /* GLOBAL STYLES TABLET */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+/* @media only screen and (min-width: 768px) and (max-width: 1024px) {
     a.block_button{
         padding: 1.5vh 3vw;
         font-family: Oswald;
@@ -110,21 +89,21 @@ body{
         margin-top: 0;
         margin-bottom: 0;
     }
-}
+} */
 
 
 /* HEADER MOBILE */
 /* hide regular header. display top logo and sidebar
 to toggle menu */
 
-@media only screen and (max-width: 768px){
+/* @media only screen and (max-width: 768px){
     header{
         display: none;
     }
-}
+} */
 
 /* HEADER TABLET */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+/* @media only screen and (min-width: 768px) and (max-width: 1024px) {
     header{
         background-color: #f4f4f4;
         color: #51375C;
@@ -137,20 +116,53 @@ to toggle menu */
         justify-content: space-around;
         align-items: center;
     }
-}
+} */
 
+/* INDEX STYLES DEFAULT/MOBILE */
 
-
-/* MOBILE STYLES WILL BE DEFAULT */
-/* INDEX STYLES MOBILE */
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) { */
+    #landing_container{
+        height: auto;
+    }
+    #landing_background {
+        flex: 1;
+        height: 100%;
+        background: url(images/landing_bg_andrikan.png) no-repeat;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left;
+    }
+    #landing_flex1{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #landing_flex1_cont{
+        /* width: */
+        padding-top: 3vh;
+        padding-bottom: 2vh;
+    }
+    #landing_container_content {
+        padding: .5vh 0 .5vh 3.5vw;
+        background-color: #E9E6E2;
+        width: 65vw;
+        margin: 0 auto;
+    }
+    .landing_header_img{
+        display: flex;
+        flex-direction: row;
+        background-color: #5D1C44;
+    }
     img#landingHeaderImg {
         object-fit: contain;
-        /* UPDATED MOBILE */
         height: 30vh;
         margin: 3vh auto 0;
     }
-
+    #landing_container_content h1{
+        color: #51375C;
+    }
+    .landingValues{
+        display:none;
+      }
     .landingValuesMOBILE{
         display:flex;
         flex-direction: row;
@@ -169,6 +181,15 @@ to toggle menu */
         aspect-ratio: auto;
         max-height: 35px;
     }
+    #landing_mission{
+        background-color: #5D1C44;
+        height: auto;
+        margin-top: -1vh;
+        padding: 0 0 6vh;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
     #landing_mission h3{
         margin-top: 0;
         padding-top: 3vh;
@@ -177,7 +198,14 @@ to toggle menu */
         margin-left: auto;
         margin-right:auto;
     }
-
+    #landing_mission p{
+        font-size: .80em;
+        width: 70vw;
+        margin-left: auto;
+        margin-right:auto;
+        text-align: center;
+        color: #f1f1f1;
+    }
     /* INDEX Programs*/
     #home_programs{
         display: flex;
@@ -201,318 +229,7 @@ to toggle menu */
         overflow: hidden;
         cursor: pointer;
     }
-    #landing_donate_flex img{
-        object-fit: contain;
-        max-height: 30vh;
-    }
-    #landingDonateContainer{
-        max-width: 90%;
-    }
-    #home_impact_stories{
-        display: flex;
-        flex-direction: column ;
-        width: 75vw;
-        justify-content: center;
-        flex-wrap: nowrap;
-        gap: 1.5vh;
 
-    }
-    .impact{
-        display:flex;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 1vw;
-        margin: 0 0 1vh;
-    }
-    .impact img{
-        max-width: 17vw;
-        height:auto;
-    }
-    .impactSpeechBubble{
-        border-radius: 22px;
-        width: 235px;
-        padding: 3.5vw;
-        vertical-align: middle;
-    }
-    .impactContent{
-        width: 70%;
-    }
-    #patternLanding2{
-        z-index: 0;
-        width: 90vw;
-        height: 55%;
-        position: absolute;
-        right: 13vw;
-        top: 0vh;
-        object-fit: cover;
-    }
-    #landingClosingImg {
-        z-index: 1;
-        position: absolute;
-        top: 2vh;
-        right: 6vw;
-        width: 60%;
-        height:auto;
-    }
-    #landingClosingContainer{
-        left: 50%;
-        transform: translate(-50%);
-        position: absolute;
-        bottom: 3vh;
-    }
-    #homeExplore{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        width: 90vw;
-        height: 8vh;
-        gap:0;
-    }
-    /* MOBILE ONLY */
-    #homeExplore .block_button p{
-        font-size: 1.40em;
-        text-align: center;
-    }
-    #homeExplore div.arrow{
-        display:none;
-    }
-
-    #landing_closing{
-        background-color: #EDEDED;
-        position: relative;
-        height: 49vh;
-    }
-
-
-}
-/* END INDEX STYLES MOBILE */
-
-
-
-/* THESE STYLES WILL BE SPECIFIED FOR TABLETS.
-MIN-WIDTH. MAX WIDTH WILL BE AUTOMATIC SINCE THERE
-WILL BE A DESKTOP MEDIA QUERY */
-/* INDEX STYLES TABLET */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-    
-    img#landingHeaderImg {
-        object-fit: contain;
-        /* UPDATED MOBILE */
-        height: 40vh;
-        margin: 3vh auto 0;
-    }
-    .landingValuesMOBILE{
-        display:none;
-    }
-    #landing_mission h3{
-        margin-top: 0;
-        padding-top: 3vh;
-        text-align: center;
-         /* UPDATED MOBILE  */
-        width: 85vw;
-        margin-left: auto;
-        margin-right:auto;
-    }
-    #home_programs{
-        display: flex;
-        flex-direction: row;
-        /* UPDATED MOBILE */
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        width: 80vw;
-        gap: 4vw;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .homeProgram{
-        position: relative;
-        background-color: #C2891F;
-        color: #fff;
-        /* UPDATED MOBILE */
-        width: 50vw;
-        height: 20vh;
-        padding: 2vh 1.5vw;
-        border-radius: 5%;
-        text-align: center;
-        overflow: hidden;
-        cursor: pointer;
-    }
-    #landing_donate_flex img{
-        object-fit: contain;
-        max-height: 45vh;
-    }
-    #landingDonateContainer{
-        max-width: 80%;
-    }
-    #home_impact_stories{
-        display: flex;
-        flex-direction: row;
-        /* UPDATED */
-        width: 65vw;
-        justify-content: center;
-        flex-wrap: nowrap;
-    }
-    .impact{
-        display:flex;
-        flex-direction: row;
-        gap: 1vw;
-        margin: 0 0 1vh;
-    }
-    .impact img{
-        max-width: 8vw;
-        height:auto;
-    }
-    .impactSpeechBubble{
-        border-radius: 22px;
-        width: 235px;
-        /* UPDTD */
-        padding: 1.5vw;
-        vertical-align: middle;
-    }
-    #patternLanding2{
-        z-index: 0;
-        width: 90vw;
-        /* UPDATED */
-        height: 65%;
-        position: absolute;
-        right: 13vw;
-        top: 0vh;
-        object-fit: cover;
-    }
-    #landingClosingImg {
-        z-index: 1;
-        position: absolute;
-        top: 2vh;
-        right: 6vw;
-        /* UPDTD */
-        width: 50%;
-        height:auto;
-    }
-    #landingClosingContainer{
-        /* UPDATDED */
-        margin-left: 10vw;
-        position: absolute;
-        bottom: 3vh;
-    }
-    #homeExplore{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        /* UPDATED */
-        width: 60vw;
-        height: 8vh;
-        gap:0;
-    }
-}
-/* END INDEX STYLES TABLET */
-
-
-
-/* THE STYLES BELOW ARE FOR TABLET. IF NOTHING CHANGES
- BETWEEN THE TABLET AND MOBILE STYLES, THEN THEY ARE
- DEFAULT STYLES AKA FOR MOBILE. MOBILE STYLES WILL
- ALSO BE DEFAULT STYLES. MEDIA QUERIES WILL BE FOR
- TABLET AND DESKTOP
- *
- /
-/* @media only screen and (min-width: 768px) and (max-width: 1024px) { */
-    #landing_container{
-        height: auto;
-    }
-    #landing_background {
-        flex: 1;
-        height: 100%;
-        background: url(images/landing_bg_andrikan.png) no-repeat;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: left;
-    }
-    #landing_flex1{
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    #landing_flex1_cont{
-        padding-top: 3vh;
-        padding-bottom: 2vh;
-    }
-    #landing_container_content {
-        padding: .5vh 0 .5vh 3.5vw;
-        background-color: #E9E6E2;
-        width: 65vw;
-        margin: 0 auto;
-    }
-    .landing_header_img{
-        display: flex;
-        flex-direction: row;
-        background-color: #5D1C44;
-    }
-    /* UPDATED 
-    img#landingHeaderImg {
-        object-fit: contain;
-         UPDATED MOBILE
-        height: 40vh;
-        margin: 3vh auto 0; 
-    }*/
-    #landing_container_content h1{
-        color: #51375C;
-    }
-    .landingValues{
-        display:none;
-      }
-    #landing_mission{
-        background-color: #5D1C44;
-        height: auto;
-        margin-top: -1vh;
-        padding: 0 0 6vh;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-    }
-
-    /* 
-    #landing_mission h3{
-        margin-top: 0;
-        padding-top: 3vh;
-        text-align: center;
-         UPDATED MOBILE 
-        width: 85vw;
-        margin-left: auto;
-        margin-right:auto;
-    } */
-    #landing_mission p{
-        font-size: .80em;
-        width: 70vw;
-        margin-left: auto;
-        margin-right:auto;
-        text-align: center;
-        color: #f1f1f1;
-    }
-
-    /* INDEX Programs*/
-    /* #home_programs{
-        display: flex;
-        flex-direction: row;
-        /* UPDATED MOBILE */
-        /* flex-wrap: nowrap;
-        justify-content: space-between;
-        width: 80vw;
-        gap: 4vw;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .homeProgram{
-        position: relative;
-        background-color: #C2891F;
-        color: #fff;
-        UPDATED MOBILE
-        width: 50vw;
-        height: 20vh;
-        padding: 2vh 1.5vw;
-        border-radius: 5%;
-        text-align: center;
-        overflow: hidden;
-        cursor: pointer;
-    } */
     .homeProgram p, .homeProgram h2{
         color:#f1f1f1;
     }
@@ -549,16 +266,16 @@ WILL BE A DESKTOP MEDIA QUERY */
         align-items: center;
         margin-bottom: 3vh;
     }
-    /* #landingDonateContainer{
-        max-width: 80%;
-    } */
+    #landingDonateContainer{
+        max-width: 90%;
+    }
     #landing_donate_flex div{
         margin:auto;
     }
-    /* #landing_donate_flex img{
+    #landing_donate_flex img{
         object-fit: contain;
-        max-height: 45vh;
-    } */
+        max-height: 30vh;
+    }
     a#home_do.block_button{
         background-color: #BDB763;
         color:#51375C;
@@ -566,6 +283,7 @@ WILL BE A DESKTOP MEDIA QUERY */
         margin-left: auto;
         margin-right: auto;
     }
+
     .adinkra_break{
         height: auto;
         max-height: 10vh;
@@ -577,9 +295,10 @@ WILL BE A DESKTOP MEDIA QUERY */
         /* updtd */
         margin: 2.65vh 0 1.5vh;
     }
-     /* INDEX Impact*/
 
-     #landing_impact{
+    /* INDEX Impact*/
+
+    #landing_impact{
         width: 80vw;
         margin-left: auto;
         margin-right: auto;
@@ -588,6 +307,250 @@ WILL BE A DESKTOP MEDIA QUERY */
     #landing_impact h2{
         text-align: center;
     }
+    #home_impact_stories{
+        display: flex;
+        flex-direction: column ;
+        width: 75vw;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 1.5vh;
+
+    }
+    .impact{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1vw;
+        margin: 0 0 1vh;
+    }
+    .impactImage{
+        align-self: flex-end;
+    }
+    .impact img{
+        max-width: 17vw;
+        height:auto;
+    }
+    p.impactName {
+        font-family: Oswald !important;
+        color:#51375C !important;
+        font-size: 1em;
+        text-align: center;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+    .impactSpeechBubble{
+        border-radius: 22px;
+        width: 235px;
+        padding: 3.5vw;
+        vertical-align: middle;
+    }
+    .impactSpeechBubble p{
+        font-size: .70em;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        color: #f1f1f1 !important;
+    }
+    .impactSpeechBubble#cran{background-color: #5D1C44;} .impactSpeechBubble#brown{background-color: #4B342D;}.impactSpeechBubble#purple{background-color: #51375C;}
+
+    a#rm{
+        color:#C2891F !important;
+        text-align: center;
+    }
+    .impactContent{
+        width: 70%;
+    }
+    /* INDEX Closing*/
+    #landing_closing{
+        background-color: #EDEDED;
+        position: relative;
+        height: 49vh;
+    }
+    #patternLanding2{
+        z-index: 0;
+        width: 90vw;
+        height: 55%;
+        position: absolute;
+        right: 13vw;
+        top: 0vh;
+        object-fit: cover;
+    }
+    #landingClosingImg {
+        z-index: 1;
+        position: absolute;
+        top: 2vh;
+        right: 6vw;
+        width: 60%;
+        height:auto;
+    }
+    #landingClosingContainer{
+        left: 50%;
+        transform: translate(-50%);
+        position: absolute;
+        bottom: 3vh;
+    }
+    #homeExplore{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        width: 90vw;
+        height: 8vh;
+        gap:0;
+    }
+    #homeExplore a{
+        text-align: center;
+        font-family: Oswald;
+        font-size: .95em;
+        width: 33%;
+        text-decoration: none;
+        color:#f1f1f1;
+    }
+
+    #homeExplore p{
+        color:#f1f1f1;
+        margin:0;
+    }
+    /* MOBILE ONLY */
+    #homeExplore .block_button p{
+        font-size: 1.40em;
+        text-align: center;
+    }
+    #homeExplore div.arrow{
+        display:none;
+    }
+
+/* END INDEX STYLES DEFAULT/MOBILE */
+
+
+
+/* INDEX STYLES TABLET */
+@media only screen and (min-width: 768px) {
+    
+    img#landingHeaderImg {
+        height: 40vh;
+    }
+    /* .landingValuesMOBILE{
+        display:none;
+    } */
+    #landing_mission h3{
+        width: 85vw;
+    }
+    /* INDEX Programs*/
+    #home_programs{
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .homeProgram{
+        width: 50vw;
+        padding: 2vh 1.5vw;
+    }
+    /* INDEX Donate */
+    #landing_donate_flex img{
+        max-height: 45vh;
+    }
+    #landingDonateContainer{
+        max-width: 80%;
+    }
+    /* impact */
+    #home_impact_stories{
+        flex-direction: row;
+        width: 65vw;
+    }
+    .impact{
+        justify-content: flex-start;
+    }
+    .impact img{
+        max-width: 8vw;
+    }
+    .impactSpeechBubble{
+        padding: 1.5vw;
+    }
+    /* INDEX Closing*/
+    #patternLanding2{
+        height: 65%;
+    }
+    #landingClosingImg {
+        width: 50%;
+    }
+    #landingClosingContainer{
+        margin-left: 10vw;
+    }
+    #homeExplore{
+        width: 60vw;
+        height: 8vh;
+    }
+    #homeExplore div.arrow{
+        height: 35% !important;
+        width:auto;
+        gap:0;
+    }
+}
+/* END INDEX STYLES TABLET */
+
+
+
+/* THE STYLES BELOW ARE FOR TABLET. 
+ *
+ /
+/* @media only screen and (min-width: 768px) and (max-width: 1024px) { */
+    /* UPDATED 
+    img#landingHeaderImg {
+        object-fit: contain;
+         UPDATED MOBILE
+        height: 40vh;
+        margin: 3vh auto 0; 
+    }*/
+
+    /* 
+    #landing_mission h3{
+        margin-top: 0;
+        padding-top: 3vh;
+        text-align: center;
+         UPDATED MOBILE 
+        width: 85vw;
+        margin-left: auto;
+        margin-right:auto;
+    } */
+
+
+    /* INDEX Programs*/
+    /* #home_programs{
+        display: flex;
+        flex-direction: row;
+        /* UPDATED MOBILE */
+        /* flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 80vw;
+        gap: 4vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .homeProgram{
+        position: relative;
+        background-color: #C2891F;
+        color: #fff;
+        UPDATED MOBILE
+        width: 50vw;
+        height: 20vh;
+        padding: 2vh 1.5vw;
+        border-radius: 5%;
+        text-align: center;
+        overflow: hidden;
+        cursor: pointer;
+    } */
+    
+    /* #landingDonateContainer{
+        max-width: 80%;
+    } */
+    
+    /* #landing_donate_flex img{
+        object-fit: contain;
+        max-height: 45vh;
+    } */
+    
+    
+     /* INDEX Impact*/
+
     /* #home_impact_stories{
         display: flex;
         flex-direction: row;
@@ -601,40 +564,19 @@ WILL BE A DESKTOP MEDIA QUERY */
         gap: 1vw;
         margin: 0 0 1vh;
     } */
-    .impactImage{
-        align-self: flex-end;
-    }
+    
     /* .impact img{
         max-width: 8vw;
         height:auto;
     } */
-    p.impactName {
-        font-family: Oswald !important;
-        color:#51375C !important;
-        font-size: 1em;
-        text-align: center;
-        margin-block-start: 0;
-        margin-block-end: 0;
-    }
+    
     /* .impactSpeechBubble{
         border-radius: 22px;
         width: 235px;
         padding: 1.5vw;
         vertical-align: middle;
     } */
-    .impactSpeechBubble p{
-        font-size: .70em;
-        margin-block-start: 0;
-        margin-block-end: 0;
-        color: #f1f1f1 !important;
-    }
-    .impactSpeechBubble#cran{background-color: #5D1C44;} .impactSpeechBubble#brown{background-color: #4B342D;}.impactSpeechBubble#purple{background-color: #51375C;}
-
-    a#rm{
-        color:#C2891F !important;
-        text-align: center;
-        text-decoration: none;
-    }
+    
     /* INDEX Closing*/
     /* #landing_closing{
         background-color: #EDEDED;
@@ -676,22 +618,10 @@ WILL BE A DESKTOP MEDIA QUERY */
     /* #homeExplore div{
         width: 33%;
     } */
-    #homeExplore a{
-        text-align: center;
-        font-family: Oswald;
-        font-size: .95em;
-        width: 33%;
-        text-decoration: none;
-        color:#f1f1f1;
-    }
-
-    #homeExplore p{
-        color:#f1f1f1;
-        margin:0;
-    }
-    #homeExplore div.arrow{
+    
+    /* #homeExplore div.arrow{
         height: 35% !important;
         width:auto;
-    }
+    } */
     
 /* } */
