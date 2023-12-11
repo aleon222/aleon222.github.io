@@ -335,7 +335,7 @@ ABOUT THE BOARD
 @media only screen and (min-width: 768px) {
     
     .landing_header_img{
-        background-color: none;
+        background-color: transparent;
     }   
     img#landingHeaderImg {
         height: 30vh;
