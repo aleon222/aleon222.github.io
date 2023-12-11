@@ -133,7 +133,7 @@ ABOUT THE BOARD
         width: 80vw;
         height: 20vh;
         padding: 2vh 2.5vw;
-        border-radius: 5%;
+        border-radius: 10px;
         text-align: center;
         overflow: hidden;
         cursor: pointer;
@@ -320,7 +320,7 @@ ABOUT THE BOARD
     }
     /* MOBILE only */
     #homeExplore .block_button p{
-        font-size: 1.40em;
+        font-size: 1.30em;
         text-align: center;
     }
     #homeExplore div.arrow{
