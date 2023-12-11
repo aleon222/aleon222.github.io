@@ -1,5 +1,29 @@
 
-/* INDEX STYLES DEFAULT/MOBILE */
+/* 
+~~STYLES INDEX~~
+
+INDEX/LANDING
+- default, tablet, desktop
+
+OUR STORY
+- default, tablet, desktop
+
+OUR WORK
+
+~secondary pages~
+ABOUT THE FOUNDER
+-default, tablet, desktop
+
+ABOUT THE BOARD
+
+*/
+
+
+
+
+/* -------- INDEX --------- */
+
+/*DEFAULT/MOBILE */
 
 /* @media only screen and (max-width: 768px) { */
     #landing_container{
@@ -17,6 +41,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
     }
     #landing_flex1_cont{
         /* width: */
@@ -33,10 +58,12 @@
         display: flex;
         flex-direction: row;
         background-color: #5D1C44;
+        width: 100vw;
     }
     img#landingHeaderImg {
         object-fit: contain;
         height: 30vh;
+        width: 90vw;
         margin: 3vh auto 0;
     }
     #landing_container_content h1{
@@ -165,7 +192,6 @@
         margin-left: auto;
         margin-right: auto;
     }
-
     .adinkra_break{
         height: auto;
         max-height: 10vh;
@@ -312,7 +338,7 @@
         background-color: none;
     }   
     img#landingHeaderImg {
-        max-height: 40vh;
+        height: 30vh;
     }
     /* .landingValuesMOBILE{
         display:none;
@@ -340,6 +366,9 @@
     #home_impact_stories{
         flex-direction: row;
         width: 65vw;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
     }
     .impact{
         justify-content: flex-start;
@@ -350,7 +379,15 @@
     .impactSpeechBubble{
         padding: 1.5vw;
     }
+    a#rm{
+        position: relative;
+        left: 90%;
+        top: 1vh;
+    }
     /* INDEX Closing*/
+    #landing_closing{
+        height: 55vh;
+    }
     #patternLanding2{
         height: 65%;
     }
@@ -358,7 +395,10 @@
         width: 50%;
     }
     #landingClosingContainer{
-        margin-left: 10vw;
+        margin-left: -13vw;
+    }
+    #landingClosingContainer h2{
+        margin-block-end: 0;
     }
     #homeExplore{
         width: 60vw;
@@ -374,7 +414,6 @@
 
 
 /* DEFAULT/MOBILE GLOBAL PAGE STYLES */
-@media only screen and (max-width: 768px) { */
     .pageTitle{
         height: auto;
         width: 85vw;
@@ -389,14 +428,18 @@
         margin-top: 0.65vh;
         vertical-align: middle;
       }
+/* END DEFAULT GLOBAL PAGE STYLES */
+
+/* TABLET GLOBAL PAGE STYLES */
+@media only screen and (min-width: 768px) {
 }
+/* END TABLET GLOBAL PAGE STYLES */
+
 
 /* DESKTOP GLOBAL PAGE STYLES */
-@media only screen and (min-width: 1024px) { */
+@media only screen and (min-width: 1024px) {
     .pageTitle{
-        height: auto;
         width: 45vw;
-        border-radius: 35px;
     }
     .readMore::after {
         content: '';
@@ -407,12 +450,23 @@
         vertical-align: middle;
       }
 }
+/* END DESKTOP GLOBAL PAGE STYLES */
 
 
 
+/* -------- OUR STORY --------- */
 
-/* OUR STORY MOBILE */
-@media only screen and (max-width: 768px) { */
+/*DEFAULT/MOBILE */
+/* @media only screen and (max-width: 768px) { */
+    #mission{
+        padding: 2vh 4.5vw 4vh;
+    }
+    #mission h2{ 
+        color:#f1f1f1;
+        text-align: center;
+    }
+    #mission p{ color:#f1f1f1;}
+
     #mission h3{
         text-align: center;
     }
@@ -425,8 +479,29 @@
         position: relative;   
         margin-left: auto;
         margin-right: auto;
-        gap: 3vw;
+        gap: 0;
         margin-bottom: 5vh;
+    }
+    #founder_preview img{
+        border-radius: 40px;
+        height: 42vw;
+        width: 41vw;
+        object-fit: cover;
+        object-position: bottom;
+        margin-top: -4vh;
+        object-position: bottom;
+        position:relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    
+    h4#founder_preview, p#founder_preview{
+        color:#4B342D;
+        margin-block-start: .15em;
+        margin-block-end: .15em;
+    }
+    .ourStoryPreview1.arrowMore{
+        margin-right: 2vw;
     }
     h2#ab_board{
         text-align: left;
@@ -436,108 +511,157 @@
         display:flex;
         flex-direction: row;
         gap: 2vw;
+        margin-bottom: 2vh;
+    }
+    .ourStoryPreview2.arrowMore{
+        margin-right: 4.5vw;
+    }
+    #board_preview{
+        width: 85vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .boardPreviewInfo{
+        align-self: flex-end;
     }
     #board_preview a{
         text-align: right;
     }
+    #board_preview p{
+        line-height: 1vh;
+    }
+    p.boardTitle{
+        font-family: Oswald, Geneva, Verdana, sans-serif;
+        color:#51375C;
+    }
+    p.boardName{
+        color:#51375C;
+        font-style: italic;
+    }
+    #board_preview.block_button{
+       align-self:center;
+       margin-bottom: 7vh;
+    }
+    #board_preview.block_button p{    color: #5D1C44;}
+    
+    .rect{
+        width: 125px;
+        height: 125px;
+        border-radius: 8px;
+        background-color: #D8CCBF;  
+    }
 
-}
+/* END OUR STORY DEFAULT */
 
 /* OUR STORY TABLET */
-@media only screen and (min-width: 768px) and (max-width: 1024px) { */
+@media only screen and (min-width: 768px) { */
+    #mission{        
+        padding: 2vh 12.5vw 4vh;
+    }
     #mission h3{
         text-align: left;
     }
     #founder_preview{
-        display: flex;
-        /* UPDATED */
         flex-direction: row;
-        width: 90vw;
-        justify-content: space-between;
-        z-index: 1; 
-        position: relative;   
-        margin-left: auto;
-        margin-right: auto;
-        gap: 3vw;
-        margin-bottom: 5vh;
+        gap:3vw;
     }
     #founder_preview img {
-        border-radius: 40px;
-        height: 35vh;
-        width: 29vw;
-        object-fit: cover;
-        object-position: bottom;
-        margin-top: -4vh;
-        float: left;
+        height: 35vw;
+        width: 31vw;
+    }
+    /* #founder_previewImg{
+        width: 34vw;
+    } */
+    #board_preview.arrowMore{
+        margin-right: 1vw;
     }
     #board_preview{
         display: flex;
-        flex-direction: row;
-        /* updtd */
-        flex-wrap: wrap;
-        gap: 3vw;
-        width: 80vw;
-        justify-content: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    h2#ab_board{
-        text-align: center;
-    }
-    .boardPreview{
-        display:flex;
-        flex-direction: column;
-    }
-}
-
-/* OUR STORY DESKTOP */
-@media only screen and (min-width: 1024px) {
-    #founder_preview{
-        display: flex;
-        flex-direction: row;
-        width: 80vw;
-        justify-content: space-between;
-        z-index: 1; 
-        position: relative;   
-        margin-left: auto;
-        margin-right: auto;
-        gap: 3vw;
-    }
-    #founder_preview img{
-        border-radius: 40px;
-        height: 39vh;
-        width: 20vw;
-        object-fit: cover;
-        margin-top: -4vh;
-        float: left;
-    } 
-
-    #board_preview{
-        display: flex;
-        flex-direction: row;
-        /* updtd */
         flex-wrap: nowrap;
         gap: 3vw;
         width: 80vw;
         justify-content: center;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: auto;
+        margin-left: 9vw;
     }
     h2#ab_board{
-        text-align: center;
+        margin-left: 7vw;
     }
     .boardPreview{
-        display:flex;
         flex-direction: column;
+        gap:0;
+    }
+    .boardPreviewInfo{
+        align-self: auto;
+    }
+    .rect{
+        width: 175px;
+        height: 175px;
+    }
+    #board_preview{
+        gap: 1vw;
+        width: 85vw;
+    }   
+    #board_preview.block_button{
+        position: static;
+        margin-left: auto;
+    }
+    .ourStoryPreview2.arrowMore {
+        margin-right: 0;
     }
 }
 
-/* ---------------SECONDARY PAGES-------------------- */
+/* OUR STORY DESKTOP */
+@media only screen and (min-width: 1024px) {
+    #founder_preview{
+        width: 80vw;
+        gap: 5vw;
+    }
+    #founder_preview img{
+        height: 27vh;
+        width: 20vw;
+    } 
+    #board_preview{
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        width: 53vw;
+    }
+    #board_preview.block_button{
+        position: relative;
+        right: 5vw;
+    }
+}
+
+
+/* -------- OUR WORK --------- */
+#programSection h2{
+    color:#E9E6E2;
+    text-align: center;
+}
+#programSection p{
+    text-align: center;
+}
+
+
+
+
+
+
+                  /* -------SECONDARY PAGES------- */
+
 
 /* -------- ABOUT THE FOUNDER --------- */
 
 /* MOBILE/DEFAULT */
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) { */
+    #aboutFounder{
+        width: 80vw;
+    }
+    #aboutFounder h3{ color:#5D1C44; text-align: center;}
+    #aboutFounder h4, #aboutFounder p { color:#4B342D; }
+    
     #about_flex{
         display:flex;
         flex-direction: row;
@@ -550,26 +674,41 @@
         height:auto;
         align-self: flex-end;
     }
-}
+    #about_flex div{
+        align-self: flex-end;
+    }
+    h2#about_flex{
+        font-weight: 500;
+        color:#4B342D;
+    }
+    
+    h4#about_flex, p#about_flex{
+        margin-left: 3vw;
+        margin-top: 0;
+        margin-bottom: 0.75vh;
+    }
+    a.block_button.centeredButton{
+        margin: 5vh auto ;
+    }
+    a.block_button.centeredButton p{
+        color:#f1f1f1 !important;
+        margin-left:auto;
+        margin-right:auto;
+    }                             
+/* end default */
 
 /* DESKTOP */
 @media only screen and (min-width: 1024px) {
     #about_flex{
-        display:flex;
-        flex-direction: row;
         flex-wrap: nowrap;
-        justify-content: center;
-        gap:3vw;
     }
     #about_flex img{
         height: 38vh;
-        width:auto;
-        align-self: flex-end;
     }
 }
 
-/* ABOUT THE BOARD */
-@media only screen and (max-width: 768px) {
+/* -------- MEET THE FOUNDER --------- */
+/* @media only screen and (max-width: 768px) { */
     .rrPageContainer#meetBoard{
         width: 85vw;
         margin-bottom: 4vh;  
@@ -578,6 +717,43 @@
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 7vh 8vw;
+    }
+    #meetBoard.greenBG p{
+        color:#51375C !important;
+    }
+    
+    .boardMemberFlex{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 2vw;
+    }
+    .boardMemberFlex div{
+       align-self: flex-end;
+    
+    }
+    .boardMemberFlex img{
+        border-radius: 10px;
+        width: 215px;
+        height: 215px;
+        object-fit: cover;
+    }
+    .boardMemberFlex h3{
+        color:#51375C;
+        margin-bottom: 0;
+        font-size: 1.15em;
+    }
+    .boardMemberFlex h4{
+        margin-top: 0;
+        font-style: italic;
+        font-size: 1em;
+    }
+    .board_container p{
+        text-align: justify;
+    }
+    .board_container.readMore::after{
+        width: 17px;
+        height: 17px;
     }
     .popupOverlay{
         display: none;
@@ -600,6 +776,28 @@
         max-height: 80vh;
         overflow: scroll;
       }
+      .popupContent.bio{
+        width: 65%;
+      }
+      .bio h4, .bio h3{
+        color:#51375C;
+      }
+      .bio p{
+        color: #fff;
+      }
+      .profile img{
+        align-self: center;
+        border-radius: 10px;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
+    .profile a{
+        color:#51375C;
+        font-family: Oswald, Geneva, Verdana, sans-serif;
+        font-size: 1em;
+        align-self: flex-end;
+    }
       .closeButton{
         text-align: right;
         font-size: 2em;
@@ -628,30 +826,17 @@
         justify-content: center;
         align-self: self-end;
     }
-}
 
-@media only screen and (min-width: 768px) AND (max-width: 1024px){
+/* MEET BOARD TABLET */
+@media only screen and (min-width: 768px){
     #meetBoardGrid{
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 7vh 8vw;
     }
     .popupContent{
-        display:flex;
         flex-direction: row;
         justify-content: space-around;
-        gap: 3vw;
       }
       .closeButton{
-        text-align: right;
-        font-size: 2em;
-        height: 4vh;
-        border: 1px solid #f1f1f1;
-        border-radius: 5px;
-        color: #f1f1f1;
-        font-weight: 500;
-        cursor: pointer;
-        padding: .5vh;
       }
       .closeDesktop{
         display:flex;
@@ -662,52 +847,14 @@
         display:none;
     }
 }
+/* MEET BOARD DESKTOP */
 @media only screen and (min-width: 1024px) {
     .rrPageContainer#meetBoard{
         width: 75vw;
-        margin-bottom: 4vh;  
-    }
-    #meetBoardGrid{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 7vh 8vw;
     }
     .popupOverlay{
-        display: none;
-        background-color: #C2891F;
-        width: 80vw;
         left: 10vw;
         top: 10vh;
-        padding: 2vw 2vh;
         height: auto;
-        border-radius: 10px;
-        position: fixed;
-        z-index: 1;
       }
-    .popupContent{
-        display:flex;
-        flex-direction: row;
-        justify-content: space-around;
-        gap: 3vw;
-      }
-      .closeButton{
-        text-align: right;
-        font-size: 2em;
-        height: 4vh;
-        border: 1px solid #f1f1f1;
-        border-radius: 5px;
-        color: #f1f1f1;
-        font-weight: 500;
-        cursor: pointer;
-        padding: .5vh;
-        
-      }
-    .closeDesktop{
-        display:flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .closeMobile{
-        display:none;
-    }
 }
