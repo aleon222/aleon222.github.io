@@ -142,9 +142,9 @@ a.block_button{
 
 /* ------------ HEADER ---------------- */
 
-header{
+/* header{
     display: none;
-}
+} */
 
 /* HEADER DESKTOP */
 @media only screen and (min-width: 1024px) {
