@@ -704,6 +704,7 @@ ABOUT THE BOARD
     }
     #about_flex img{
         height: 38vh;
+        width: auto;
     }
 }
 
