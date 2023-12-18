@@ -171,14 +171,23 @@ function showPopup(){
   popupOverlay.style.display='flex';
 
   // Get the corresponding close button for each readMore button
-  const closeButton = popupOverlay.querySelector('.closeButton');
+  // const closeButton = popupOverlay.querySelector('.closeButton');
 
   // Attach click event listener to the close button
-  closeButton.addEventListener('click', closePopup);
+  // closeButton.addEventListener('click', closePopup);
+
+  // Get the corresponding close button for each readMore button
+  const closeButtonMobile = popupOverlay.querySelector('.closeButton.closeMobile');
+  const closeButtonDesktop = popupOverlay.querySelector('.closeButton.closeDesktop');
+
+  // Attach click event listener to the close buttons
+  closeButtonMobile.addEventListener('click', closePopup);
+  closeButtonDesktop.addEventListener('click', closePopup);
 }
 
 //function to close the popup
 function closePopup(){
+  console.log('Closing popup')
     // Get all popup overlays and hide them
     const allPopups = document.querySelectorAll('.popupOverlay');
     allPopups.forEach(popup => {
