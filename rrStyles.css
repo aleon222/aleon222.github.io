@@ -799,53 +799,10 @@ a.block_button{
 
 
   /* DONATE */
-.rrPageContainer#support{
-    width: 75vw;
-    margin-left: auto;
-    margin-right: auto;
-}
-#support h1{
-    color:#f1f1f1;
-    text-align: center;
-}
-.rrPageContainer#support h2{
-text-align: center;
-}
-#yourContribution{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 3vw;
-}
-#yourContribution div{
-    width: 33%;
-    border-radius: 33px;
-    border: 5px solid #C2891F;
-    background-color: #EDEDED;
-    text-align: center;
-    padding: 1.5vh 1.75vw 1vh;
-    height: 19vh;
 
-}
 
-#yourContribution div p{
-    color:#4B342D;
-    font-family: Oswald, Geneva, Verdana, sans-serif;
-}
-p.contributeNum{
-    font-size: 3em;
-    margin: 1.5vh auto;
-    font-weight: 500;
-}
-p.contributeDesc{
-    font-size: 1.15em;
-}
 
-#donateNow p{
-    color:#51375C !important;
-}
+
 
 
 

@@ -3,18 +3,27 @@
 ~~STYLES INDEX~~
 
 INDEX/LANDING
-- default, tablet, desktop
 
 OUR STORY
-- default, tablet, desktop
 
 OUR WORK
 
-~secondary pages~
+GET INVOLVED
+
+BLOG
+
+RESOURCES
+
+CONTACT US
+
+~~~secondary pages~~~
 ABOUT THE FOUNDER
--default, tablet, desktop
 
 ABOUT THE BOARD
+
+PROGRAMS
+-HYGIENE DRIVE
+-
 
 */
 
@@ -433,7 +442,7 @@ ABOUT THE BOARD
         text-align: left;
         margin-top: 0;
         margin-bottom: 0;
-        font-size: 2.3em;
+        font-size: 2em;
         padding-left: 7vw;
     }
     .main_section {
@@ -443,6 +452,9 @@ ABOUT THE BOARD
 
 /* TABLET GLOBAL PAGE STYLES */
 @media only screen and (min-width: 768px) {
+    .subPageHeader h1 {
+        font-size: 2.5em;
+    }
 }
 /* END TABLET GLOBAL PAGE STYLES */
 
@@ -463,6 +475,10 @@ ABOUT THE BOARD
     .main_section{
         padding: 2vh 12.5vw 2vh;
     }
+    .subPageHeader h1 {
+        font-size: 3em;
+    }
+
 }
 /* END DESKTOP GLOBAL PAGE STYLES */
 
@@ -1134,15 +1150,248 @@ ABOUT THE BOARD
 
 /* end blog desktop */
 
-/* -------- DONATE --------- */
-/* end donate desktop */
 
 
 /* -------- CONTACT US --------- */
+.rrPageContainer#contact{
+    width: 90vw;
+}
+#contactFlex{
+    display:grid;
+    grid-template-columns: 1fr;
+}
+#contactCrisis {
+    display: block;
+    border-radius: 25px;
+    width: 80%;
+    padding: 2vh;
+    margin-top: 4vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+a#contactCrisis {
+    text-decoration: none;
+}
+#contactCrisis h3, #contactCrisis p{
+    color: #fff;
+}
+#contactInfo h1{
+    color:#51375C;
+}
+
+#contactFormContainer{
+    margin-top: 5vh;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+fieldset{
+    border:none;
+}
+#contactUs label{
+    margin: 2% 0 0 .5% !important;
+    color: #5D1C44;
+    width: 93%;
+    display:block;
+    font-size: 1em;
+    font-family: Oswald, Arial, Helvetica, sans-serif;
+}
+
+#contactUs input{
+    width: 100%;
+    max-width: 100%;
+    margin: 0.25vh 0 2vh;
+    padding: .55vh 0.5vw;
+    border: solid 4px #BDB763;
+    border-radius: 7px; 
+    background-color: #E9E6E2;
+    color: #4B342D;
+    font-size: 1em;
+    font-family:OpenSans, Arial, Helvetica, sans-serif;
+}
+#contactUs input:focus, #contactUs textarea:focus{
+    outline-color: #4B342D;
+    border-color: #C2891F;
+}
+textarea#message{
+    width: 100%;
+    max-width: 100%;
+    padding: 1vh 0.5vw;
+    border: solid 4px #BDB763;
+    border-radius: 7px; 
+    background-color: #E9E6E2;
+    color: #4B342D;
+    font-size: 1em;
+    font-family:OpenSans, Arial, Helvetica, sans-serif;
+}
+
+input#submitForm{
+    background-color: #C2891F;
+    font-size: 1.1em;
+    color: white;
+    padding: 1vh;
+    width: 97%;
+    margin-top: 2vh;
+    border: 0;
+}
+input#submitForm:hover{
+    background-color: #BDB763;
+    color:#4B342D;
+    cursor:pointer;
+}
+#keepInTouch{
+    width: 100%;
+}
+#keepInTouch p{
+    font-size: 1.5em;
+    color:#51375C;
+    text-align: center;
+}
+#contactSocials{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+#keepInTouch img{
+    width: 50%;
+}
+
+/* contact tablet */
+@media only screen and (min-width: 768px) {
+    h1#contactFlex{
+        text-align: center;
+    }
+}
+/* tablet only */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    #contactFlex h1{
+        text-align: center;
+    }
+    #contactCrisis{
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+    }
+    #contactUs fieldset{
+        margin-top: -4vh;
+    }
+}
+
+/* contact desktop */
+@media only screen and (min-width: 1024px) {
+    h1#contactFlex{
+        text-align: left;
+    }
+    #contactFlex{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #contactInfo{
+        width: 40vw;
+    }
+    #contactCrisis{
+        margin-left: 0;
+    }
+    #contactFormContainer{
+        width: 50vw;
+    }
+    #keepInTouch{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: baseline;
+    }
+    #contactSocials{
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+}
 /* end contact desktop */
 
 
 
+/* -------- DONATE --------- */
+
+#support h1{
+    color:#f1f1f1;
+    text-align: center;
+}
+.supportHeader h2{
+    text-align: center;
+    color:#f1f1f1;
+    margin: 2vh 0;
+}
+.rrPageContainer#support{
+    width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+}
+#donateFlex{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#donateFlex div{
+    width: auto;
+}
+#yourContribution{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2vh;
+}
+#yourContribution div{
+    width: 75%;
+    border-radius: 33px;
+    border: 5px solid #C2891F;
+    background-color: #EDEDED;
+    text-align: center;
+    padding: 1.5vh 1.75vw 1vh;
+    height: auto;
+}
+#yourContribution div p{
+    color:#4B342D;
+    font-family: Oswald, Geneva, Verdana, sans-serif;
+}
+p.contributeNum{
+    font-size: 3em;
+    margin: 1.5vh auto;
+    font-weight: 500;
+}
+p.contributeDesc{
+    font-size: 1.15em;
+}
+#donateNow p{
+    color:#51375C !important;
+}
+
+
+
+/* contact tablet */
+@media only screen and (min-width: 768px) {
+    #donateFlex{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .rrPageContainer#support{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #yourContribution div{
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .rrPageContainer#support{
+        width: 75vw;
+    }
+}
+
+/* end donate desktop */
 
 
 
@@ -1502,6 +1751,173 @@ ABOUT THE BOARD
     }
 }
 /* end programs */
+
+
+/* -------- SPONSORSHIP --------- */
+
+
+#sponsorh1.subPageHeader h1 {
+    text-align: center;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sponsor_section{
+
+}
+.sponsor_section h2{
+    text-align: left;
+    padding-left: 5vw;
+}
+#sponsor1 h2{
+    color: #fff;
+    text-align: left;
+    padding-left: 5vw;
+}
+#sponsorSect2 h2{
+}
+#sponsor3 h2{
+    color: #fff;
+    text-align: left;
+    padding-left: 5vw;
+}
+.sponsor_section h3, .sponsor_section p{
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sponsorshipContext h3{
+    margin-top: 0;
+    margin-bottom: 1vh;
+}
+.sponsorshipContext p{
+    color:#f1f1f1;
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+}
+.sponsor_flex{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+.sponsorshipContext{
+    padding: 2vh 0;
+}
+
+/* tiers */
+#sponsorFlex{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 3vh;
+    height: auto;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sponsorFlexBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #51375C;
+    border-radius: 25px;
+    max-width: 80%;
+    height: auto;
+    padding: 2.5vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sponsorFlexBox h3{
+    color:#E9E6E2;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: auto;
+}
+.sponsorFlexBox ul{
+    padding-inline-start: 15px;
+}
+.sponsorFlexBox li{
+    color:#E9E6E2;
+    font-family: OpenSans;
+    font-size: .85em;
+    width: auto;
+}
+
+/* payment */
+#sponsorSect5{
+    margin-top: 5vh;
+}
+
+#sponsorSect5 h3{
+    color:#51375C;
+    margin-bottom: 0;
+}
+#sponsorSect5 p{
+    margin-top: 0;
+}
+
+
+/* closing */
+#sponsorshipClosing{
+    padding: 3vh 0;
+}
+#sponsorshipClosing h2, #sponsorshipClosing h3{
+    color: #fff;
+    text-align: center;
+    width:90vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* tablet */
+@media only screen and (min-width: 768px) {
+    
+    .sponsor_section h2{
+        text-align: center;
+    }
+    #sponsor1 h2{
+        text-align: center;
+        padding-left: 0;
+    }
+    #sponsorSect2 p{
+        text-align: center;
+    }
+    #sponsor3 h2{
+        text-align: center;
+        padding-left: 0;
+    }
+    .sponsor_flex{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* tiers */
+    #sponsorFlex{
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 3vw;
+        width: 90vw;
+    }
+    .sponsorFlexBox{
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+    .sponsorFlexBox li{
+        font-size: 1em;
+    }
+}
+
+/* desktop */
+@media only screen and (min-width: 1024px) {
+    #sponsorFlex{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* end sponsorship */
+
+
 
 
 /* -------- PARTNER WITH US--------- */
