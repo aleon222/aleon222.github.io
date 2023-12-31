@@ -140,7 +140,7 @@ PROGRAMS
         background-color: #C2891F;
         color: #fff;
         width: 80vw;
-        height: 20vh;
+        height: 26vh;
         padding: 2vh 2.5vw;
         border-radius: 10px;
         text-align: center;
@@ -158,12 +158,13 @@ PROGRAMS
         left: 0;
         width: 100%;
         height: 100%;
+        transition: background-image 0.5s ease-in-out;
     }
     .hover_flip img{
         object-fit: cover;
         width:100%;
         height:100%;
-        border-radius: 5%;
+        border-radius: 10px;
         
     }
     .homeProgram:hover .hover_flip{
@@ -201,6 +202,10 @@ PROGRAMS
         margin-left: auto;
         margin-right: auto;
     }
+    a#home_do.block_button:hover{
+        background-color: #4B342D;
+        color:#f1f1f1;
+    }
     .adinkra_break{
         height: auto;
         max-height: 10vh;
@@ -216,7 +221,7 @@ PROGRAMS
     /* INDEX Impact*/
 
     #landing_impact{
-        width: 80vw;
+        width: 93vw;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 5vh;
@@ -231,6 +236,7 @@ PROGRAMS
         /* justify-content: center; */
         flex-wrap: nowrap;
         gap: 1.5vh;
+        margin-bottom: 2.5vh;
 
     }
     .impactFlexHome{
@@ -257,12 +263,12 @@ PROGRAMS
     }
     .impactSpeechBubble{
         border-radius: 22px;
-        width: 235px;
+        width: 60vw;
         padding: 3.5vw;
         vertical-align: middle;
     }
     .impactSpeechBubble p{
-        font-size: .70em;
+        font-size: .85em;
         margin-block-start: 0;
         margin-block-end: 0;
         color: #f1f1f1 !important;
@@ -270,8 +276,12 @@ PROGRAMS
     .impactSpeechBubble#cran{background-color: #5D1C44;} .impactSpeechBubble#brown{background-color: #4B342D;}.impactSpeechBubble#purple{background-color: #51375C;}
 
     a#rm{
-        color:#C2891F !important;
-        text-align: center;
+        color:#C2891F;
+        position: relative;
+        left: 80%;
+    }
+    a#rm:hover{
+        color:#4B342D;
     }
     .impactContent{
         width: 70%;
@@ -326,6 +336,9 @@ PROGRAMS
     #homeExplore p{
         color:#f1f1f1;
         margin:0;
+    }
+    .homeExploreBtn:hover{
+        background-color: #4B342D;
     }
     /* MOBILE only */
     #homeExplore .block_button p{
@@ -388,11 +401,11 @@ PROGRAMS
     }
     .impactSpeechBubble{
         padding: 1.5vw;
+        width: 30vw;
     }
     a#rm{
-        position: relative;
-        left: 100%;
         top: 1vh;
+        left: 90%
     }
     /* INDEX Closing*/
     #landing_closing{
@@ -421,6 +434,14 @@ PROGRAMS
     }
 }
 /* END INDEX STYLES TABLET */
+
+/* INDEX DESKTOP*/
+@media only screen and (min-width: 1024px) {
+    .impactSpeechBubble{
+        width: 25vw;
+    }
+}
+/* END INDEX */
 
 
 /* DEFAULT/MOBILE GLOBAL PAGE STYLES */
@@ -489,7 +510,7 @@ PROGRAMS
 /*DEFAULT/MOBILE */
 /* @media only screen and (max-width: 768px) { */
     #mission{
-        padding: 2vh 4.5vw 4vh;
+        padding: 2vh 7.5vw 6vh;
     }
     #mission h2{ 
         color:#f1f1f1;
@@ -532,6 +553,12 @@ PROGRAMS
     }
     .ourStoryPreview1.arrowMore{
         margin-right: 2vw;
+    }
+    .ourStoryPreview1 a, .ourStoryPreview2 a{
+        color:#51375C;
+    }
+    .ourStoryPreview1 a:hover, .ourStoryPreview2 a:hover{
+        color:#4B342D;
     }
     h2#ab_board{
         text-align: left;
@@ -576,9 +603,10 @@ PROGRAMS
     
     .rect{
         width: 125px;
-        height: 125px;
+        /* height: 125px; */
+        height: 5px;
         border-radius: 8px;
-        background-color: #D8CCBF;  
+        background-color: #E9E6E2;  
     }
 
 /* end our story default */
@@ -628,7 +656,8 @@ PROGRAMS
     }
     .rect{
         width: 175px;
-        height: 175px;
+        /* height: 175px; */
+        height: 10px;
     }
     #board_preview{
         gap: 1vw;
@@ -651,8 +680,8 @@ PROGRAMS
         gap: 5vw;
     }
     #founder_preview img{
-        height: 27vh;
-        width: 20vw;
+        height: 20vw;
+        width: 18vw;
     } 
     #board_preview{
         flex-wrap: nowrap;
@@ -662,6 +691,9 @@ PROGRAMS
     #board_preview.block_button{
         position: relative;
         right: 5vw;
+    }
+    .ourStoryPreview2.arrowMore{
+        margin-right: -25vw;
     }
 }
 /* end our story */
@@ -694,6 +726,7 @@ PROGRAMS
         max-width: 90vw;
         margin-left: auto;
         margin-right: auto;
+        flex-wrap: wrap;
     }
     #mc_embed_signup input{
         border-radius: 14px;
@@ -731,8 +764,11 @@ PROGRAMS
         height: 50%;
         padding: 1vh 3.5vw 1vh;
         overflow: hidden;
+        cursor: pointer;
     }
-    
+    #mc-embedded-subscribe.button:hover{
+        background-color: #BDB763;
+    }
     #mc-embedded-subscribe p{
         font-family: Oswald, Geneva, Verdana, sans-serif;
         font-size: 1.05em;
@@ -801,18 +837,82 @@ PROGRAMS
     a.progCardLink:hover .programCard{
         border-color:#C2891F;
     }
+    #impact_stories h2{
+        text-align: center;
+    }
+    #impactStories{
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        grid-template-columns: 1fr;
+    }
     .impact{
         display:flex;
         flex-direction: row;
         justify-content: space-between;
         gap: 1vw;
         margin: 0 0 1vh;
+        width: auto;
     }
-    .impact img{
-        max-width: 17vw;
-        height:auto;
+    .impact img {
+        max-width: 25vw;
+        height: auto;
+    }
+    #pastPrograms h2{
+        color:#f1f1f1;
+    }
+    #past_program_cards{
+        display:grid;
+        grid-template-columns: 1fr;
+        gap: 3vw;
+        width:75vw; 
+        margin-top: 3vh;
+        margin-left: auto;
+        margin-right: auto;
     }
 /* } */
+
+/* OUR WORK TABLET */
+@media only screen and (min-width: 768px) {
+    #mc_embed_signup_scroll {
+        flex-wrap: NOwrap;
+    }
+    #program_cards{
+        grid-template-columns: repeat(auto-fit, minmax(45%, 1fr)); 
+        width: 90vw;
+    }
+    .progCardOverlay{
+        padding: 1vh 1vw;
+    }
+    .impact{
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+
+    #impact_stories{
+        margin-bottom: 5vh;
+    }
+    #impactStories{
+        width: 95vw;
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5vh;
+    }
+    #impact3{
+        grid-column: span 2; /* Span the entire width of the grid */
+        max-width: 40vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .impact img{
+        max-width: 10vw;
+    }
+    #past_program_cards{
+        grid-template-columns: repeat(2, 1fr);
+    } 
+}
+
 
 /* OUR WORK DESKTOP */
 @media only screen and (min-width: 1024px) {
@@ -820,17 +920,23 @@ PROGRAMS
         max-width:50vw;
     }
     #program_cards{
-        grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
-    }
-    .progCardOverlay{
-        padding: 1vh 1vw;
+        width: 75vw;
     }
     p.progCardTitle {
         font-size: 1.5em;
     }
     a.progCardLink{
-        font-size: 1.15em;
+        font-size: 1.05em;
     }
+    #impactStories{
+        width: 85vw;
+        gap: 2.5vw;
+    }
+    .impact{
+        align-items: normal;
+        justify-content: space-between;
+    }
+
 }
 /* END our work desktop*/
 
@@ -893,6 +999,9 @@ PROGRAMS
         align-items: center;
         justify-content: center;
         cursor: pointer;
+    }
+    .getInvolvedMenu button:hover{
+        background-color: #BDB763;
     }
     .getInvolvedMenu button h2 {
         color: #f1f1f1;
@@ -1440,7 +1549,12 @@ p.contributeDesc{
         color:#f1f1f1 !important;
         margin-left:auto;
         margin-right:auto;
-    }                             
+    }
+    .block_button#meetBoardBtn:hover{
+        background-color: #4B342D;
+    }
+
+
 /* end default */
 
 /* DESKTOP */
@@ -1504,6 +1618,10 @@ p.contributeDesc{
     .board_container.readMore::after{
         width: 17px;
         height: 17px;
+        cursor: pointer;
+    }
+    #orange.readMore.board_container::after:hover{
+        background: url('images/readMore_purple.png') no-repeat center center / contain;
     }
     .popupOverlay{
         display: none;
@@ -1516,6 +1634,7 @@ p.contributeDesc{
         border-radius: 10px;
         position: fixed;
         z-index: 1;
+        overflow: scroll;
       }
     .popupContent{
         display:flex;
@@ -1610,6 +1729,7 @@ p.contributeDesc{
         left: 10vw;
         top: 10vh;
         height: auto;
+        max-height: 65vh;
       }
 }
 
@@ -1763,11 +1883,16 @@ p.contributeDesc{
     margin-right: auto;
 }
 .sponsor_section{
-
+    margin-bottom: 5vh;
 }
+
 .sponsor_section h2{
     text-align: left;
     padding-left: 5vw;
+}
+#sponsor1 {
+    position: relative;
+    z-index: 1;
 }
 #sponsor1 h2{
     color: #fff;
@@ -1786,23 +1911,72 @@ p.contributeDesc{
     margin-left: auto;
     margin-right: auto;
 }
+
+.sponsor_flex{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 2vw;
+    width: 85vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sponsorshipContext{
+    padding: 2vh 0;
+    min-width: 40%;
+    width: 40%;
+    padding-top: 5vh;
+}
+
 .sponsorshipContext h3{
     margin-top: 0;
     margin-bottom: 1vh;
+    width: auto;
 }
 .sponsorshipContext p{
     color:#f1f1f1;
     margin-top: 1vh;
     margin-bottom: 3vh;
+    width: auto;
 }
-.sponsor_flex{
-    display: flex;
-    flex-direction: column;
+
+img#sponsor1IMG{
+    border-radius: 25px;
+    width: auto;
+    height: 85%;
+    margin-top: 5vh;
+    z-index: 1;
+    position: relative;
+}
+/* img#sponsor1Pattern{
+    border-radius: 20px;
+    width: 26vw;
     height: auto;
+    right: 0;
+    bottom: 35vh;
+    position: absolute;
+} */
+
+#sponsorSect2{
+    margin-top: 5;
 }
-.sponsorshipContext{
-    padding: 2vh 0;
+#sponsor3{
+    z-index: 1;
+    position: relative;
 }
+img#sponsor3IMG{
+    border-radius: 30px;
+    width: 70%;
+    height: auto;
+    margin-top: 5vh;
+    margin-left: 7vw;
+    z-index: 1;
+    position: relative;
+}
+#sponsorSect3.sponsorshipContext h3, #sponsorSect3.sponsorshipContext p{
+    text-align: right;
+}
+
 
 /* tiers */
 #sponsorFlex{
@@ -1890,8 +2064,28 @@ p.contributeDesc{
     .sponsor_flex{
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        height: 55vh;
     }
+    #sponsorSect1.sponsor_flex{
+        justify-content: space-evenly;
+    }
+    img.sponsorPattern{
+        border-radius: 20px;
+        width: 35vw;
+        height: auto;
+        position: absolute;
+    }
+    img#sponsor1Pattern{
+        right: 0;
+        bottom: 10vh;
+    }
+    img#sponsor3Pattern{
+        bottom: -84vh;
+    }
+    #sponsorSect4 p{
+        text-align: center;
+    }
+    
 
     /* tiers */
     #sponsorFlex{

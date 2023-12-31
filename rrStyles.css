@@ -65,7 +65,7 @@ h3{
 }
 h4{
     font-family: OpenSans, Arial, Helvetica, sans-serif;
-    font-size: 1em;
+    font-size: 1.15em;
     font-style: normal;
     font-weight: 400;
     line-height: 125%; /* 51.25px */
@@ -76,7 +76,7 @@ h4{
 }
 p{
     font-family: OpenSans, Arial, Helvetica, sans-serif;
-    font-size: .85em;
+    font-size: 1em;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -113,15 +113,15 @@ a.block_button{
         margin-block-end: 0.6em;
     }
     h3{
-        font-size: 1.25em;
+        font-size: 1.35em;
     }
     h4{
-        font-size: 1.25em;
+        font-size: 1.3em;
         margin-block-start: .65em;
         margin-block-end: .65em;
     }
     P{
-        font-size: .85em;
+        font-size: 1em;
     }
 
     a.block_button{
@@ -344,6 +344,7 @@ a.block_button{
     background: url('images/readMore_orange.png') no-repeat center center / contain;
 }
 
+
 /* .main_section{
     padding: 2vh 12.5vw 2vh;
 } */
@@ -424,7 +425,7 @@ a.block_button{
     img#landingHeaderImg {
         height: 45vh !important;
         margin: 8vh auto 0 !important;
-        padding-right: 4vw !important;
+        padding-right: 8vw !important;
         width: auto !important;
         margin-bottom: 2.5vh !important;
     }
@@ -479,7 +480,7 @@ a.block_button{
 
     .homeProgram{
         width: 30vw !important;
-        height: 28vh !important;
+        height: 20vw !important;
     }
    
 
@@ -517,12 +518,17 @@ a.block_button{
         /* width: 30vw !important; */
         margin: 2vh 0 !important;
     }
+    .impactSpeechBubble p{
+        font-size: 1em;
+    }
 
     a#rm{
         /* updtd */
         text-align: right !important;
         left:95%;
     }
+
+
     /* INDEX Closing*/
     #landing_closing{
         height: 70vh !important;
@@ -535,6 +541,9 @@ a.block_button{
         top: 6vh !important;
         right: 10vw !important;
         width: 33% !important;
+    }
+    #landingClosingContainer{
+        margin-left: -20vw !important;
     }
     #homeExplore{
         width: 35vw !important;
