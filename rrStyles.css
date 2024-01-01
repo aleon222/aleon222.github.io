@@ -147,16 +147,7 @@ a.block_button{
 } */
 
 
-/* HEADER DESKTOP */
-@media only screen and (min-width: 1024px) {
-    header{
-        justify-content: space-between !important;
-    }
-    .mainMenu{
-        width: 9vw;
-        height: 8vh;
-    }
-}
+
 
 /* HEADER TABLET */
 @media only screen and (min-width: 768px) {
@@ -203,6 +194,7 @@ a.block_button{
     nav a:visited{
         color:#51375C;
     }
+
     nav a #header_donate{
         color: #f1f1f1;
         background-color: #51375C;
@@ -212,7 +204,11 @@ a.block_button{
         color: #f1f1f1;
     }
 
-    .mainMenu:hover, .dropdown a:hover, .dropdown a:active {
+    nav a.active{
+        color: #fff;
+        background-color: #C2891F;
+    }
+    .mainMenu:hover, .dropdown a:hover, .mainMenu:active, .dropdown a:active {
         background-color: #C2891F;
         color: #fff;
         transition: background-color 0.15s;
@@ -231,6 +227,15 @@ a.block_button{
         justify-content: center;
         align-items: center; /* Center items vertically */
     }
+    .mainMenu a.active {
+        color: #fff;
+     }
+     
+     .mainMenu.active {
+        background-color: #C2891F;
+        color: #fff;
+        transition: background-color 0.15s;
+     }
     .dropdown{
         display: none;
         position:absolute;
@@ -239,13 +244,22 @@ a.block_button{
         background-color: #f4f4f4;
         z-index: 1;
         height: auto;
+        width: 100%;
+        text-align: center;
     }
     .dropdown a{
         font-size: 15px;
-        width: 111px;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 .25vw;
+        margin-left: auto;
+        margin-right: auto;
         color: #51375C !important;
     }
-
+    .dropdown a.active {
+        color: #fff !important;
+     }
     .mainMenu:hover .dropdown{
         display:block;
     }
@@ -257,7 +271,16 @@ a.block_button{
 
 }
 /* HEADER TABLET END */
-
+/* HEADER DESKTOP */
+@media only screen and (min-width: 1024px) {
+    header{
+        justify-content: space-between !important;
+    }
+    .mainMenu{
+        width: 9vw;
+        height: 8vh;
+    }
+}
 
 
 
