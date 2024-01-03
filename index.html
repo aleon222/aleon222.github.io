@@ -74,22 +74,22 @@
 
 <!-- Programs-->
 <div id="home_programs">
-    <div class="homeProgram">
-        <a></a>
-        <h2>SoS: Sisters of Strength</h2>
-        <p>Empowering 8-week course, tailored exclusively for Black women who experience bipolar disorder.</p>
-        <div class="hover_flip">
-            <img src="images/four-best-friends-young-adrican-women-having-fun-spend-time-together-stacking-hands-then-up.jpg">
+    <a id="home_program" class="programCard" href="SoS.html" >
+        <img src="images/four-best-friends-young-adrican-women-having-fun-spend-time-together-stacking-hands-then-up.jpg">
+        <div class="progCardOverlay" id="homeProgOverlay">
+            <h3 class="progCardTitle">SOS: Sisters of Strength</h3>
+            <p>Empowering 8-week course, tailored exclusively for Black women who experience bipolar disorder.</p>
         </div>
-    </div>
-    <div class="homeProgram">
-        <h2>SOS Peer Support Groups</h2>
-        <p>Calling all Black women interested in starting their own businesses despite mental health challenges, including mental illness, substance use, or co-occurring disorders!</p>
-        <div class="hover_flip">
-            <img src="images/four-best-friends-young-adrican-women-having-fun-spend-time-together-stacking-hands-then-up.jpg">
+        </a>
+    <a id="home_program" class="programCard" href="SoS.html" >
+        <img src="images/four-best-friends-young-adrican-women-having-fun-spend-time-together-stacking-hands-then-up.jpg">
+        <div class="progCardOverlay" id="homeProgOverlay">
+            <h3 class="progCardTitle">SOS Peer Support Groups</h3>
+            <p class="progCardDesc">Calling all Black women interested in starting their own businesses despite mental health challenges!</p>
         </div>
-    </div>
+    </a>
 </div>
+
 
 <!--Donate-->
 <div id="landing_donate_flex">
@@ -100,7 +100,6 @@
    <div id="landingDonateContainer">
     <h2>Empower a Black Woman's Mind: Your Gift Seeds Hope, Healing, and Resilience
     </h2>
-
     <a href="donate.html" class="block_button" id="home_do">Donate</a>
    </div> 
 </div>
@@ -167,5 +166,13 @@
 
 </div>
 
+<!-- FOOTER -->
+<script>
+    fetch('footer.html')
+   .then(response => response.text())
+   .then(data => {
+       document.querySelector('body').insertAdjacentHTML('beforeend', data);
+   });
+</script>
 </body>
 </html>

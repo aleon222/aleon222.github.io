@@ -4,6 +4,8 @@
 
 INDEX/LANDING
 
+FOOTER
+
 OUR STORY
 
 OUR WORK
@@ -16,14 +18,17 @@ RESOURCES
 
 CONTACT US
 
+
 ~~~secondary pages~~~
 ABOUT THE FOUNDER
 
 ABOUT THE BOARD
 
 PROGRAMS
--HYGIENE DRIVE
+- HYGIENE DRIVE
 -
+
+
 
 */
 
@@ -135,7 +140,21 @@ PROGRAMS
         margin-left: auto;
         margin-right: auto;
     }
-    .homeProgram{
+    a#home_program.programCard {
+        border: 4px solid #C2891F;
+        height: 34.5vh;
+    }
+    #homeProgOverlay.progCardOverlay{
+        height: 45%;
+    }
+    #homeProgOverlay.progCardOverlay p{
+        font-size: .87em;
+        margin-top: 1vh;
+    }
+    #homeProgOverlay h3{
+        color:#51375C;
+    }
+    /* .homeProgram{
         position: relative;
         background-color: #C2891F;
         color: #fff;
@@ -146,6 +165,7 @@ PROGRAMS
         text-align: center;
         overflow: hidden;
         cursor: pointer;
+        transition: all 0.1s ease;
     }
 
     .homeProgram p, .homeProgram h2{
@@ -158,7 +178,10 @@ PROGRAMS
         left: 0;
         width: 100%;
         height: 100%;
-        transition: background-image 0.5s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease;
+
     }
     .hover_flip img{
         object-fit: cover;
@@ -168,8 +191,10 @@ PROGRAMS
         
     }
     .homeProgram:hover .hover_flip{
-        display: block;
-    }
+        opacity: 1;
+        visibility:visible;
+    } */
+
     /* INDEX Donate*/
     #landing_donate_flex{
         display: flex;
@@ -201,6 +226,8 @@ PROGRAMS
         font-size: 1.5em;
         margin-left: auto;
         margin-right: auto;
+        padding: 1.5vh 7vw;
+        border-radius: 3px;
     }
     a#home_do.block_button:hover{
         background-color: #4B342D;
@@ -208,7 +235,7 @@ PROGRAMS
     }
     .adinkra_break{
         height: auto;
-        max-height: 10vh;
+        max-height: 9vh;
         width: 100%;
         min-width: 70vw;
         object-fit: contain;
@@ -369,24 +396,96 @@ PROGRAMS
         width: 85vw;
     }
     /* INDEX Programs*/
-    #home_programs{
+    #home_programs {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 80vw;
+        gap: 4vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #home_program.programCard {
+        width:80vw;
+    }
+    a#home_program.programCard {
+        height: 23vh;
+    }
+    #home_program img{
+        width: 55%;
+        object-position: right top;
+        height: 27.5vh;
+        display: block;
+        object-fit: cover;
+    }
+    #homeProgOverlay.progCardOverlay {
+        height: 100%;
+        width: 45%;
+        right: 0;
+        left: auto;
+    }
+    #homeProgOverlay h3{
+        margin-bottom: 0;
+    }
+    #homeProgOverlay p{
+        margin-top: 1vh;
+        font-size: auto;
+    }
+
+    /* INDEX Donate */
+    #landing_donate_flex{
+        gap: 0;
+        position: relative;
+        padding: 1vh 0;
+        display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
+        justify-content: center;
+        text-align: center;
+        margin: 5vh auto 0;
+        align-items: flex-start;
+        max-height: 27vh;
+        max-width: 80vw;
     }
-    .homeProgram{
-        width: 50vw;
-        padding: 2vh 1.5vw;
+    #landing_donate_img{
+        display: flex;
     }
-    /* INDEX Donate */
     #landing_donate_flex img{
-        max-height: 45vh;
+        height: 100%;
+        align-self: flex-end;
+    }
+    #landing_donate_flex div {
+        position: relative;
+        margin: 0;
+        height: 100%;
+        align-self: flex-end;
     }
     #landingDonateContainer{
-        max-width: 80%;
+        background-color: #5D1C44;
+        padding: 2vh 0 2vh 5vw;
+        border-radius: 0 20px 20px 0;
+        margin-left: -2.5vw !important;
+        z-index: -1;
+
     }
+    #landingDonateContainer h2{
+        width: 80%;
+        vertical-align: top;
+        color: #f1f1f1;
+        text-align: left;
+    }
+    a#home_do.block_button{
+        position: relative;
+        right: -14vw;
+        margin-right: 2vw;
+        padding: 1.5vh 3vw;
+    }
+
+
     /* impact */
     #home_impact_stories{
-        width: 75vw;
+        /* width: 85vw; */
         flex-direction: row;
         justify-content: space-around;
         margin-left:auto !important;
@@ -502,6 +601,208 @@ PROGRAMS
 
 }
 /* END DESKTOP GLOBAL PAGE STYLES */
+
+/* -------- FOOTER --------- */
+
+/* Default/Mobile */
+footer{
+    background-color: #BDB763;
+    padding: 5vh 0;
+    position: relative;
+}
+#footer-content{
+    width: 90vw;
+    margin-left:auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+}
+
+#footer-content h2{
+    line-height: 115%;
+}
+h2#footer-h2-mobile{
+    margin-top: 0;
+}
+h2#footer-h2-desktop{
+    display: none;
+}
+#footer-content p{
+    color:#51375C;
+    margin-bottom: 1vh;
+}
+#aleon{
+    height: 2vh;
+    font-family: OpenSans;
+    color: #51375C;
+}
+#aleon a{
+    text-decoration: none;
+    color: #51375C;
+}
+#aleon img{
+    display: inline;
+    vertical-align: middle;
+    max-height: 100%;
+}
+#aleon a:hover{
+    color:#C2891F;
+}
+#aleon a:active{
+    text-decoration: underline;
+}
+#footer-stay{
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+#footer-connected h3{
+    color:#51375C;
+    margin-bottom: 1vh;
+}
+#footer-socials{
+    display: flex;
+    flex-direction: row;
+    height: 4vh;
+    gap: 2vw;
+}
+#footer-socials img{
+    height: 100%;
+}
+
+
+#footerNewsletter{
+    background-color: #C2891F;
+    height: 10vh;
+    padding: 2vh;
+    border-radius: 15px;
+}
+#footer-informed h3{
+    color:#fff;
+    margin:0;
+}
+#footer-site-map{
+    display: none;
+}
+#footer-logo-flex{
+    display: flex;
+    flex-direction: row;
+    margin-top: 4vh;
+}
+img#candid{
+    width: 80px;
+    height: 100%;
+}
+img#footer-logo{
+    width: 50vw;
+    height:100%;
+}
+
+.footer-shapes{
+    position: absolute;
+    opacity: 60%;
+}
+img#footer-star{
+    width:50%;
+    height:auto;
+    top:0;
+    left: 0;
+}
+img#footer-rainbow{
+    height:fit-content;
+    max-height: 65%;
+    width:auto;
+    right: -6vw;
+    bottom: 0;
+}
+/* Tablet */
+@media only screen and (min-width: 768px){
+    img#footer-star{
+        width:35%;
+    }
+    img#footer-rainbow{
+        right: -3vw;
+    }
+    #footer-stay{
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 3vh;
+        width:80vw;
+        margin: 5vh auto;
+    }
+    #footerNewsletter{
+        width: 40vw;
+    }
+    #footer-socials{
+        margin-top: 3vh;
+    }
+    #footer-logo-flex{
+        justify-content:center;
+    }
+    img#candid{   
+        align-self: center;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024px){
+    #footer-content{
+        width: 85vw;}
+
+    #footer-h2-mobile{
+        display: none;
+    }
+    h2#footer-h2-desktop{
+        display: inline;
+        margin-top: 1.5vh;
+    }
+    img#footer-star{
+        width:25%;
+    }
+    #footer-stay{
+        margin: 0 auto 3.5vh auto;
+    }
+    #footer-text{
+        width: 85vw;
+        margin: 0 auto 4.5vh auto;
+    }
+    #footer-site-map{
+        display: flex;
+        margin: 3vh 0 0 1vw;
+        gap: 4vw;
+    }
+    ul.siteMap-column{
+        padding-left: 0;
+    }
+    .siteMap-column li{
+        list-style-type: none;
+    }
+    .siteMapTop a, .siteMapSub a{
+        text-decoration: none;
+    }
+    .siteMapTop a{
+        color:#5D1C44;
+        font-size: large;
+    }
+    .siteMapSub a{
+        color:#4B342D;
+    }
+    .siteMapTop a:hover, .siteMapSub a:hover{
+        color:#C2891F;
+    }
+    .siteMapTop a:active, .siteMapSub a:active{
+        color:#C2891F;
+        text-decoration: underline;
+    }
+    #footer-logo-flex{
+        margin-top: 1vh;
+    }
+    img#footer-logo{
+        width: 25vw;
+        height:100%;
+    }
+}
+
 
 
 
@@ -797,6 +1098,7 @@ PROGRAMS
         border-radius: 33px;
         border: 2px solid #51375C;
     }
+    
     .programCard img{
         width:100%;
         height:auto;
@@ -1355,21 +1657,33 @@ input#submitForm:hover{
     font-size: 1.5em;
     color:#51375C;
     text-align: center;
+    margin-bottom: 1.65vh;
 }
 #contactSocials{
     display: flex;
     flex-direction: row;
     justify-content: center;
     text-align: center;
+    gap: 4vw;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#contactSocials a{
 }
 #keepInTouch img{
-    width: 50%;
+    width: 100%;
 }
 
 /* contact tablet */
 @media only screen and (min-width: 768px) {
     h1#contactFlex{
         text-align: center;
+    }
+    #contactSocials{
+        gap: 1.5vw;
+        width: 75%;
+        margin-left: 0;
     }
 }
 /* tablet only */
