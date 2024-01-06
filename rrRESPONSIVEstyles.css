@@ -1935,6 +1935,12 @@ p.contributeDesc{
         height: 215px;
         object-fit: cover;
     }
+    .cerissa-brown img{
+        object-position: top;
+    }
+    .loretta-brown img{
+        object-position: 0 70%;
+    }
     .boardMemberFlex h3{
         color:#51375C;
         margin-bottom: 0;
@@ -2010,7 +2016,6 @@ p.contributeDesc{
         font-weight: 500;
         cursor: pointer;
         padding: .5vh;
-    
         display: flex;
         align-items: center;
         justify-content: center;
@@ -2256,8 +2261,7 @@ p.contributeDesc{
 }
 .sponsorshipContext{
     padding: 2vh 0;
-    min-width: 40%;
-    width: 40%;
+    width: 100%;
     padding-top: 5vh;
 }
 
@@ -2275,8 +2279,8 @@ p.contributeDesc{
 
 img#sponsor1IMG{
     border-radius: 25px;
-    width: auto;
-    height: 85%;
+    width: 100%;
+    height: auto;
     margin-top: 5vh;
     z-index: 1;
     position: relative;
@@ -2427,6 +2431,7 @@ img#sponsor3IMG{
         gap: 3vw;
         width: 90vw;
     }
+
     .sponsorFlexBox{
         width: 100%;
         flex-wrap: nowrap;
@@ -2434,6 +2439,21 @@ img#sponsor3IMG{
     .sponsorFlexBox li{
         font-size: 1em;
     }
+    .sponsorshipContext{
+        padding: 2vh 0;
+        min-width: 40%;
+        width: 40%;
+        padding-top: 5vh;
+    }
+    img#sponsor1IMG{
+        border-radius: 25px;
+        width: auto;
+        height: 85%;
+        margin-top: 5vh;
+        z-index: 1;
+        position: relative;
+    }
+
 }
 
 /* desktop */

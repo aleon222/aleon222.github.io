@@ -142,9 +142,10 @@ a.block_button{
 
 /* ------------ HEADER ---------------- */
 
-/* header{
-    display: none;
-} */
+/* MOBILE/DEFAULT */
+#mobile-menu-icon{
+
+}
 
 
 
@@ -194,6 +195,7 @@ a.block_button{
     nav a:visited{
         color:#51375C;
     }
+
     nav a #header_donate{
         color: #f1f1f1;
         background-color: #51375C;
@@ -203,14 +205,19 @@ a.block_button{
         color: #f1f1f1;
     }
 
+    nav a.active{
+        color: #fff;
+        background-color: #C2891F;
+    }
     .mainMenu:hover, .dropdown a:hover, .mainMenu:active, .dropdown a:active {
         background-color: #C2891F;
         color: #fff;
         transition: background-color 0.15s;
     }
 
-    .mainMenu:hover a, .mainMenu:active  a{
-        color: #f1f1f1;
+    .mainMenu a:hover, .mainMenu a:active{
+        color: #fff;
+        text-decoration: underline;
     }
 
     .mainMenu{
@@ -222,6 +229,15 @@ a.block_button{
         justify-content: center;
         align-items: center; /* Center items vertically */
     }
+    .mainMenu a.active {
+        color: #fff;
+     }
+     
+     .mainMenu.active {
+        background-color: #C2891F;
+        color: #fff;
+        transition: background-color 0.15s;
+     }
     .dropdown{
         display: none;
         position:absolute;
@@ -243,14 +259,16 @@ a.block_button{
         margin-right: auto;
         color: #51375C !important;
     }
-
+    .dropdown a.active {
+        color: #fff !important;
+     }
     .mainMenu:hover .dropdown{
         display:block;
     }
 
     .dropdown a:hover,
     .dropdown a:active{
-        color: #f1f1f1 !important;
+        color: #fff !important;
     }
 
 }
@@ -479,36 +497,6 @@ a.block_button{
         width: 60vw !important;
     }
 
-    /* INDEX Programs*/
-    #home_programs{
-        width: 63vw !important;
-        gap: 8vw !important;
-    }
-
-    .homeProgram{
-        width: 30vw !important;
-        height: 20vw !important;
-    }
-   
-
-    /* INDEX Donate*/
-    #landing_donate_flex{
-        flex-wrap: nowrap !important;
-        width: 70vw !important;
-        margin-top: 8vh !important;
-        margin-bottom: 5vh !important;
-    }
-    /* #landing_donate_flex div{
-    
-    } */
-    #landingDonateContainer{
-        margin-right: 3.5vw !important;
-        max-width: 33vw !important;
-    }
-    #landing_donate_flex img{
-        margin-left: 3vw !important;
-        padding-right: 5vw !important;
-    }
 
     .adinkra_break{
         margin: 2.65vh 0 !important;
@@ -550,7 +538,7 @@ a.block_button{
         width: 33% !important;
     }
     #landingClosingContainer{
-        margin-left: -20vw !important;
+        margin-left: -22.5vw !important;
     }
     #homeExplore{
         width: 35vw !important;

@@ -142,16 +142,107 @@ a.block_button{
 
 /* ------------ HEADER ---------------- */
 
-/* header{
+/* MOBILE/DEFAULT */
+header#desktop-nav{
     display: none;
-} */
+}
+header#mobile-header{
+    display: block;
+    overflow: hidden;
+}
+#mobile-menu-flex{
+    display: flex;
+    height: 6vh;
+    margin: 0 2vw;
+    justify-content: space-between;
+}
+#mobile-menu-icon{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: .5vh;
+    padding: 0;
+    border: 0;
+    margin-top: 2vh;
+    margin-right:2vw;
+    background-color: transparent;
+}
+button#mobile-menu-icon span{
+    width: 7.5vw;
+    background-color:#4B342D;
+    height: .5vh;
+    border-radius: 5px;
+}
+button#mobile-menu-icon:hover span{
+    background-color:#C2891F;
+}
+#mobile-menu-icon.close > #mobile-menu-flex{
+    margin-right:auto
+}
+
+#mobile-menu-icon.close span:nth-child(1) {
+    transform: rotate(45deg) translateY(7.5px) translateX(4.5px);
+}
+#mobile-menu-icon.close span:nth-child(2) {
+    opacity: 0;
+} 
+#mobile-menu-icon.close span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px) translateX(4.95px);
+}
+
+img#mobile_logo_header{
+    width: 30vw;
+    height:auto;
+}
+
+
+#mobile-menu {
+    display: none;
+    flex-direction: column;
+    width:100vw;
+    height: 100vh;
+    color:#E9E6E2;
+   }
+
+.toggle-menu#mobile-menu {
+    display: flex;
+}
+nav#mobile-menu a{
+    display:inline-block;
+    width: 100%;
+    padding-left: 3vw;
+    color:#51375C;
+    text-decoration: none;
+}
+nav#mobile-menu a:active{
+    color: #5D1C44;
+    text-decoration: underline 1px;
+}
+#mobile-menu .mainMenu a{
+    font-size: 1.15em;
+    margin-bottom: 1vh;
+}
+#mobile-menu .dropdown a{
+    font-family: OpenSans;
+    font-size: 1em;
+    padding-left: 6vw;
+}
 
 
 
 
 /* HEADER TABLET */
 @media only screen and (min-width: 768px) {
-    header{
+    #mobile-menu-icon{
+        display: none;
+    }
+    header#mobile-header{
+        display: none;
+    }
+    
+    header#desktop-nav{
+        display: flex !important;
         background-color: #f4f4f4;
         color: #51375C;
         text-align: center;
@@ -159,7 +250,6 @@ a.block_button{
         width:100vw;
         top:0;
         z-index: 3;
-        display: flex !important;
         justify-content: space-around;
         align-items: center;
     }
@@ -272,6 +362,7 @@ a.block_button{
 
 }
 /* HEADER TABLET END */
+
 /* HEADER DESKTOP */
 @media only screen and (min-width: 1024px) {
     header{

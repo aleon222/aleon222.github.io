@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="rrRESPONSIVEstyles.css">
 
     <title>Meet the Board</title>
-    <script src="rrHeader.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+
 </head>
 
 <body>
@@ -24,8 +25,8 @@
 
     <!-- MEMBER 1 -->
     <div class="board_container">
-        <div class="boardMemberFlex">
-            <img src="images/cerissaA.Brown_FounderPicture.jpeg" alt="">
+        <div class="boardMemberFlex cerissa-brown">
+            <img src="images/board-members/IMG_0755_Original.jpg" alt="Close up selfie of Cerissa colorful and smiling">
             <div>
                 <h3>Board Chair</h3>
                 <h4>Cerissa A. Brown</h4>                
@@ -49,8 +50,8 @@
                 <p>Cerissa's commitment to mental health is evident in her work. In her 2021 Mayoral campaign in Birmingham, Alabama, she made mental health a cornerstone issue. As Chair of the Board at Reecee's Reach, she envisions the organization as a sanctuary for Black women, providing equitable and effective mental health resources and support. She is confident that with the concerted efforts of the Board and the community, Reecee's Reach can make a significant difference in the lives of Black women.</p>
                 <p>Cerissa is also a sought-after speaker, enlightening various events, seminars, and discussions with her insights. Academically, she also excels, pursuing a Bachelor of Social Work (BSW) at Walden University with a perfect 4.0 GPA. She is a proud member of three honor societies and a student member of the National Association of Social Workers (NASW).</p>
             </div>
-              <div class="profile">
-                <img src="images/cerissaA.Brown_FounderPicture.jpeg" alt="Cerissa A. Brown">
+              <div class="profile cerissa-brown">
+                <img src="images/board-members/IMG_0755_Original.jpg" alt="Close up selfie of Cerissa colorful and smiling">
                 <a href="https://www.linkedin.com/in/cerissabrown/" target="_blank">
                   LinkedIn</a>
               </div>
@@ -66,8 +67,8 @@
 
     <!-- MEMBER 2 -->
     <div class="board_container">
-        <div class="boardMemberFlex">
-            <img src="images/cerissaA.Brown_FounderPicture.jpeg" alt="">
+        <div class="boardMemberFlex darcel-burton">
+            <img src="images/board-members/darcel_20170729_064409.JPG" alt="Darcel leaning against a window with lipstick decals, looking up to the sky">
             <div>
                 <h3>Board Co-Chair</h3>
                 <h4>Darcel Burton</h4>                
@@ -90,8 +91,8 @@
                 <p>In addition to her work at Reecee's Reach, Darcel is also a passionate advocate for cultural diversity and understanding. She has tirelessly researched and confronted social challenges and deeply respects Black women's strength and resilience.</p>
                 <p>As Co-Chair of Reecee's Reach, Darcel celebrates stories from all Black women with mental health challenges. She desires to educate, inspire, and deepen the community's understanding of the diverse perspectives that shape our world.</p>
             </div>
-              <div class="profile">
-                <img src="images/cerissaA.Brown_FounderPicture.jpeg" alt="Cerissa A. Brown">
+              <div class="profile darcel-burton">
+                <img src="images/board-members/darcel_20170729_064409.JPG" alt="Darcel leaning against a window with lipstick decals, looking up to the sky">
                 <a href="https://www.linkedin.com/in/darcelburton/" target="_blank">
                   LinkedIn</a>
               </div>
@@ -106,11 +107,11 @@
 
     <!-- MEMBER 3 -->
     <div class="board_container">
-   <div class="boardMemberFlex">
- <img src="images/cerissaA.Brown_FounderPicture.jpeg" alt="">
+      <div class="boardMemberFlex loretta-brown">
+        <img src="images/board-members/loretta_Attachment.JPG" alt="Loretta smiling in a narrow hallway posing with a floral mesh embroidered skirt, a blouse and boots">
             <div>
                 <h3>Board Member</h3>
-                <h4>Gladys Brown</h4>                
+                <h4>Loretta Brown</h4>                
             </div>
         </div>
         
@@ -131,8 +132,8 @@
                 <p>Loretta's commitment to community advocacy is evident in initiatives like the MLK Day of Service and Feminine Hygiene Drive, reflecting her genuine understanding of marginalized communities' challenges. As a Community Member on the board, she voluntarily shares her faith-rooted insights and experiences to contribute to the organization's strategy and initiatives. Loretta takes her role seriously, providing valuable input on mental health initiatives, outreach, and awareness-raising activities and participating actively in decision-making.</p>
                 <p>Loretta sees her board position as not just a role but a calling. She is deeply committed to Reecee's Reach, envisioning the organization as a hand extended to Black women in need. "I see Reecee's Reach reaching women who need a helping hand," she reflects. "One day, they will be in a good place in life where they can always reach out and give a helping hand to someone else."</p>
             </div>
-            <div class="profile">
-              <img src="images/cerissaA.Brown_FounderPicture.jpeg" alt="Cerissa A. Brown">
+            <div class="profile loretta-brown">
+              <img src="images/board-members/loretta_Attachment.JPG" alt="Loretta smiling in a narrow hallway posing with a floral mesh embroidered skirt, a blouse and boots">
                 <a href="https://www.linkedin.com/in/lorettagladysbrown/" target="_blank">
                   LinkedIn</a>
             </div>
@@ -151,11 +152,13 @@
     </div>
 
 
+<!-- HEADER -->
+<script src="rrHeader.js" defer></script>
 
+<!-- MEET BOARD POPUP -->
 <script>
 //Target all readMore buttons
 const readMoreButtons = document.querySelectorAll('.readMore');
-
 
 //Function to show the popup when readMore is clicked
 function showPopup(){
@@ -170,11 +173,6 @@ function showPopup(){
   //display the popup overlay
   popupOverlay.style.display='flex';
 
-  // Get the corresponding close button for each readMore button
-  // const closeButton = popupOverlay.querySelector('.closeButton');
-
-  // Attach click event listener to the close button
-  // closeButton.addEventListener('click', closePopup);
 
   // Get the corresponding close button for each readMore button
   const closeButtonMobile = popupOverlay.querySelector('.closeButton.closeMobile');
