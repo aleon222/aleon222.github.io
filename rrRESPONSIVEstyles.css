@@ -537,6 +537,31 @@ PROGRAMS
 
 /* INDEX DESKTOP*/
 @media only screen and (min-width: 1024px) {
+    #home_programs{
+        margin-bottom: 5vh;
+        width: 70vw;
+        gap: 2vw;
+    }   
+    a#home_program.programCard {
+        height: 30vh;
+    }
+    #home_program.programCard {
+        width: 70vw;
+        border-radius: 17px;
+    }
+    #home_program img {
+        height: 30vh;
+    }
+    #landing_donate_flex{
+        max-height: none;
+    }
+    #landing_donate_flex img{
+        height: 37vh;
+        max-height: none;
+    }
+    /* #landing_donate_flex{
+        margin: 10vh auto 0;
+    } */
     .impactSpeechBubble{
         width: 25vw;
     }
@@ -797,6 +822,8 @@ img#footer-rainbow{
     }
     #footer-logo-flex{
         margin-top: 1vh;
+        justify-content: space-between;
+        flex-direction: row-reverse;
     }
     img#footer-logo{
         width: 25vw;
@@ -1489,7 +1516,7 @@ img#footer-rainbow{
         margin-bottom: 3vh;
     }
     .blogPostContainer.orangeBG{
-        flex-direction: column-reverse;
+        /* flex-direction: column-reverse; */
     }
     .blogPostContainer img{
         object-fit: cover;
@@ -1551,7 +1578,7 @@ img#footer-rainbow{
 /* blog desktop */
 @media only screen and (min-width: 1024px) {
     #blog_container{
-        width: 60vw;
+        width: 75vw;
         margin: 5vh auto;
     }
     .blogPostContainer {
@@ -1567,7 +1594,6 @@ img#footer-rainbow{
 /* -------- CONTACT US --------- */
 .rrPageContainer#contact{
     width: 90vw;
-    margin-bottom: 2vh;
 }
 #contact h1{
    color:#51375C;
@@ -1908,7 +1934,6 @@ p.contributeDesc{
 /* @media only screen and (max-width: 768px) { */
     .rrPageContainer#meetBoard{
         width: 85vw;
-        margin-bottom: 4vh;  
     }
     #meetBoardGrid{
         display: grid;
@@ -1972,9 +1997,16 @@ p.contributeDesc{
         height: 80vh;
         border-radius: 10px;
         position: fixed;
-        z-index: 1;
-        overflow: scroll;
+        z-index: 3;
+        overflow-y: scroll;
+        overflow-x: hidden;
       }
+  
+      .popupOverlay::-webkit-scrollbar-track {
+        all:unset;
+        height: 100%;
+      }
+
     .popupContent{
         display:flex;
         flex-direction: column;
