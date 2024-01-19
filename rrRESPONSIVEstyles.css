@@ -696,10 +696,12 @@ h2#footer-h2-desktop{
     height: 100%;
 }
 
-
+#footer-informed{
+    position: relative;
+}
 #footerNewsletter{
     background-color: #C2891F;
-    height: 10vh;
+    height: 9vh;
     padding: 2vh;
     border-radius: 15px;
 }
@@ -707,6 +709,22 @@ h2#footer-h2-desktop{
     color:#fff;
     margin:0;
 }
+#footerNewsletter a{
+    background: #e9e6e2;
+    color: #4B342D;
+    width: 85%;
+    margin-top: 1.5vh;
+    border: 0;
+    padding-block: 0.5vh;
+    border-radius: 7px;
+    font-family: OpenSans;
+    font-size: 1em;
+}
+#footerNewsletter a:hover{
+    background: #5D1C44;
+    color: #f1f1f1;   
+}
+
 #footer-site-map{
     display: none;
 }
@@ -756,8 +774,18 @@ img#footer-rainbow{
         width:80vw;
         margin: 5vh auto;
     }
+    #footer-informed h3{
+        text-align: right;
+    }
     #footerNewsletter{
-        width: 40vw;
+        height: 7.5vh;
+        width: 30vw;
+    }
+    #footerNewsletter a{
+        position: absolute;
+        right: 2vh;
+        text-align: center;
+        text-decoration: none;
     }
     #footer-socials{
         margin-top: 3vh;
@@ -787,6 +815,10 @@ img#footer-rainbow{
     }
     #footer-stay{
         margin: 0 auto 3.5vh auto;
+    }
+    #footerNewsletter{
+        height: 10vh;
+        width: 20vw;
     }
     #footer-text{
         width: 85vw;
@@ -1695,7 +1727,7 @@ textarea#message{
     font-family:OpenSans, Arial, Helvetica, sans-serif;
 }
 
-input#submitForm{
+button#submitForm{
     background-color: #C2891F;
     font-size: 1.1em;
     color: white;
@@ -1704,7 +1736,7 @@ input#submitForm{
     margin-top: 2vh;
     border: 0;
 }
-input#submitForm:hover{
+button#submitForm:hover{
     background-color: #BDB763;
     color:#4B342D;
     cursor:pointer;
@@ -1726,6 +1758,7 @@ input#submitForm:hover{
     }
     #mailing-address p{
         margin: 0 0 0 1vw;
+        text-align: left;
     }
     #mailing-address h3{
         text-align: left;
