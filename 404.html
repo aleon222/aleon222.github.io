@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="rrStyles.css">
+    <link rel="stylesheet" href="rrRESPONSIVEstyles.css">
+
+    <title>Resources</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+
+    <script src="rrHeader.js" defer></script>
+</head>
+
+<body class="rr-404">
+<!-- GLOBAL HEADER -->
+<div id="headerContainer"></div>
+
+    <div class="rrPageContainer" id="rr-404-error" role="main">
+       <div>
+            <h2>404 Error</h2>
+            <p>Oops! The page you are looking for does not exist.</p>
+       </div>
+        
+    
+    </div>
+
+<!-- FOOTER -->
+<script>
+    fetch('footer.html')
+   .then(response => response.text())
+   .then(data => {
+       document.querySelector('body').insertAdjacentHTML('beforeend', data);
+   });
+</script>
+
+</body>
+</html>

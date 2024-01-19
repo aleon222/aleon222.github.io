@@ -213,6 +213,7 @@ PROGRAMS
     }
     #landingDonateContainer{
         max-width: 90%;
+        z-index: 1;
     }
     #landing_donate_flex div{
         margin:auto;
@@ -229,6 +230,7 @@ PROGRAMS
         margin-right: auto;
         padding: 1.5vh 7vw;
         border-radius: 3px;
+        z-index: 2;
     }
     a#home_do.block_button:hover{
         background-color: #4B342D;
@@ -467,7 +469,7 @@ PROGRAMS
         padding: 2vh 0 2vh 5vw;
         border-radius: 0 20px 20px 0;
         margin-left: -2.5vw !important;
-        z-index: -1;
+        z-index: 1;
 
     }
     #landingDonateContainer h2{
@@ -1477,6 +1479,17 @@ img#footer-rainbow{
         color:#f1f1f1;
         width: 80%;
     }
+    .resourceBox:hover{
+        background-color: #C2891F;
+    }
+    .resourceBox:hover h3, .resourceBox:hover p{
+        color:#fff;
+    }
+    .resourceBox:active h3, .resourceBox:active p{
+        text-decoration: underline;
+    }
+
+
 /* } */
 /* TABLET */
 @media only screen and (min-width: 768px) {
@@ -1728,17 +1741,19 @@ textarea#message{
 }
 
 button#submitForm{
-    background-color: #C2891F;
     font-size: 1.1em;
     color: white;
     padding: 1vh;
     width: 97%;
     margin-top: 2vh;
-    border: 0;
+    border: 1.5px solid #C2891F;
+    border-radius: 7px;
+    color: #4B342D;;
+    background-color: #e9e6e2;
 }
 button#submitForm:hover{
-    background-color: #BDB763;
-    color:#4B342D;
+    background-color: #C2891F;
+    color:#fff;
     cursor:pointer;
 }
 
@@ -2654,3 +2669,52 @@ img#sponsor3IMG{
 }
 
 p.ambassador { font-size: 2.35em;}
+
+
+
+/* -------- 404 and Coming Soon --------- */
+body.rr404{
+    overflow: hidden;
+}
+.rrPageContainer#rr-404-error{
+    height: 100vh;
+    margin:0;
+    background-image: url("images/patternGrid@2x_multi.png");
+    background-repeat: repeat;
+    background-size: 100vw;
+    position: relative;
+    background-attachment: fixed;
+}
+
+#rr-404-error div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #E9E6E2;
+    border-radius: 5px;
+    padding: 3.5vw;
+}
+
+#rr-404-error div p, #rr-404-error div h2{
+    text-align: center;
+}
+
+#rr-coming-soon{
+    margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+#rr-coming-soon p, #rr-coming-soon h2{
+    text-align: center;
+}
+#rr-coming-soon img{
+ width: 50vw;
+ height:auto;
+ object-fit: contain;
+ align-self: center;
+}
